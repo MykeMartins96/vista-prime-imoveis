@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Encontre casas e apartamentos para comprar ou alugar com a Vista Prime Imóveis.">
+
+    <title>Vista Prime | Encontre seu novo lar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <div class="container header-content">
+
+            <a href="#inicio" class="logo">
+                <span class="logo-icon">◆</span>
+                Vista<span>Prime</span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="nav-menu" type="button">
+                ☰
+            </button>
+
+            <nav class="nav" id="nav-menu" aria-label="Menu principal">
+                <a href="#inicio">Início</a>
+                <a href="#imoveis">Imóveis</a>
+                <a href="#sobre">Sobre nós</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <a href="#contato" class="header-button">
+                Fale com um especialista
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- BANNER PRINCIPAL -->
+        <section class="hero" id="inicio">
+
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+
+                <span class="hero-tag">
+                    Seu próximo capítulo começa aqui
+                </span>
+
+                <h1>
+                    Encontre o lugar perfeito
+                    para chamar de <em>lar.</em>
+                </h1>
+
+                <p>
+                    Imóveis selecionados, atendimento personalizado
+                    e as melhores oportunidades para você viver
+                    uma nova história.
+                </p>
+
+                <a href="#imoveis" class="btn btn-primary">
+                    Explorar imóveis →
+                </a>
+
+            </div>
+        </section>
+
+        <!-- BUSCA DE IMÓVEIS -->
+        <section class="search-section">
+            <div class="container">
+
+                <form class="search-box" id="search-form">
+
+                    <div class="form-group">
+                        <label for="finalidade">Finalidade</label>
+
+                        <select id="finalidade">
+                            <option value="todos">Comprar ou alugar</option>
+                            <option value="venda">Comprar</option>
+                            <option value="aluguel">Alugar</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo">Tipo de imóvel</label>
+
+                        <select id="tipo">
+                            <option value="todos">Todos os tipos</option>
+                            <option value="Apartamento">Apartamento</option>
+                            <option value="Casa">Casa</option>
+                            <option value="Cobertura">Cobertura</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="localizacao">Localização</label>
+
+                        <input type="text" id="localizacao" placeholder="Digite o bairro ou cidade">
+                    </div>
+
+                    <button type="submit" class="btn btn-search">
+                        Buscar imóveis
+                    </button>
+
+                </form>
+
+            </div>
+        </section>
+
+        <!-- IMÓVEIS -->
+        <section class="properties-section" id="imoveis">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div>
+                        <span class="section-tag">
+                            SELEÇÃO EXCLUSIVA
+                        </span>
+
+                        <h2>Imóveis em destaque</h2>
+
+                        <p>
+                            Descubra oportunidades selecionadas
+                            para diferentes estilos de vida.
+                        </p>
+                    </div>
+
+                    <button class="text-button" id="clear-filters" type="button">
+                        Ver todos os imóveis →
+                    </button>
+                </div>
+
+                <p class="results-count" id="results-count" aria-live="polite">
+                    Carregando imóveis...
+                </p>
+
+                <!-- CARDS GERADOS PELO JAVASCRIPT -->
+                <div class="properties-grid" id="properties-grid"></div>
+
+                <div class="empty-state" id="empty-state" hidden>
+                    <h3>Nenhum imóvel encontrado</h3>
+                    <p>
+                        Tente alterar os filtros para encontrar
+                        outras oportunidades.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section class="about-section" id="sobre">
+            <div class="container about-content">
+
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
+                        alt="Interior moderno de um imóvel" loading="lazy">
+                </div>
+
+                <div class="about-text">
+
+                    <span class="section-tag">
+                        CONHEÇA A VISTA PRIME
+                    </span>
+
+                    <h2>
+                        Mais do que imóveis,
+                        realizamos novos começos.
+                    </h2>
+
+                    <p>
+                        Na Vista Prime, acreditamos que encontrar
+                        um imóvel é muito mais do que escolher
+                        um endereço.
+                    </p>
+
+                    <p>
+                        Nosso compromisso é oferecer um atendimento
+                        próximo, transparente e personalizado
+                        em cada etapa da sua jornada.
+                    </p>
+
+                    <a href="#contato" class="btn btn-dark">
+                        Entre em contato →
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <section class="contact-section" id="contato">
+            <div class="container contact-content">
+
+                <span class="section-tag">
+                    ESTAMOS AQUI PARA AJUDAR
+                </span>
+
+                <h2>
+                    Vamos encontrar seu próximo imóvel?
+                </h2>
+
+                <p>
+                    Fale com nossa equipe e descubra as melhores
+                    oportunidades para você.
+                </p>
+
+                <a href="#" id="contact-whatsapp" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    Conversar pelo WhatsApp →
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <div>
+                <a href="#inicio" class="logo footer-logo">
+                    <span class="logo-icon">◆</span>
+                    Vista<span>Prime</span>
+                </a>
+
+                <p>
+                    Seu próximo lar começa aqui.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#inicio">Início</a>
+                <a href="#imoveis">Imóveis</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="current-year"></span>
+                Vista Prime Imóveis. Todos os direitos reservados.
+            </p>
+
+            <p>Projeto demonstrativo — imóveis fictícios.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
